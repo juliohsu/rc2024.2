@@ -31,7 +31,7 @@ A entrega final do projeto consiste nos itens detalhados na tabela abaixo. Certi
 Consulte os seguintes arquivos neste repositório para obter detalhes completos sobre cada parte do projeto:
 
 *   **[📄 Especificação do Protocolo FTCP](./protocolo.md):** Descreve em detalhes as etapas de negociação (UDP) e transferência (TCP), os formatos das mensagens e o fluxo de comunicação esperado entre cliente e servidor.
-*   **[🦈 Tutorial de Análise com Wireshark](./wireshark_tutorial.md):** Contém um guia passo a passo sobre como usar o Wireshark para analisar o arquivo de captura (`.pcapng`), incluindo exemplos com DHCP/DNS e instruções específicas para analisar o tráfego do seu protocolo FTCP.
+*   **[🦈 Tutorial de Análise com Wireshark](./wireshark_tutorial.md):** Contém um guia passo a passo sobre como usar o Wireshark para analisar o arquivo de captura (`.pcap`), incluindo exemplos com DHCP/DNS e instruções específicas para analisar o tráfego do seu protocolo FTCP.
 *   **[📝 Instruções para o Relatório](./relatorio.md):** Apresenta a estrutura e o conteúdo esperado para o relatório final, focando na análise do protocolo e do tráfego de rede capturado.
 *   **[🐍 Exemplo de servidor/cliente (Python)](./echo_server.py):** Um código de exemplo em Python demonstrando um servidor e cliente "echo" que opera simultaneamente em TCP e UDP. 
 
@@ -39,17 +39,11 @@ Consulte os seguintes arquivos neste repositório para obter detalhes completos 
 
 1.  **Configuração:** Certifique-se de que o arquivo `config.ini` está presente na mesma pasta dos scripts e configurado corretamente com as portas desejadas e os caminhos para os arquivos `a.txt` e `b.txt`.
 2.  **Iniciar o Servidor:**
+    
     ```bash
-    # Exemplo (adapte ao seu ambiente/linguagem)
     python servidor_ftcp.py
     ```
 3.  **Executar o Cliente (em outro terminal):**
     ```bash
-    # Exemplo (adapte ao seu ambiente/linguagem)
-    # Formato: python cliente_ftcp.py <arquivo_solicitado> <protocolo_desejado>
-    python cliente_ftcp.py a.txt TCP
+    python cliente_ftcp.py a.txt
     ```
-
-*Observação: Adapte os nomes dos arquivos (`servidor_ftcp.py`, `cliente_ftcp.py`) e os comandos de execução conforme a sua implementação.*
-
----

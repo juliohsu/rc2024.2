@@ -9,7 +9,34 @@ Os alunos deverão **implementar o servidor e o cliente** seguindo o protocolo e
 O fluxo de operação é dividido em duas etapas principais. 
 O diagrama ilustra, em alto nível, o fluxo de comunicação entre o cliente e o servidor durante a transferência de um arquivo utilizando o protocolo proposto. 
 
-![Sequencia](sequence.svg)
+```mermaid
+%%{init: { 'logLevel': 'debug', 'theme': 'neutral' } }%%
+
+sequenceDiagram
+    autonumber
+    actor C as Cliente
+    participant S as Servidor <br/> FTCP
+
+
+    C->>S: UDP: REQUEST,<PROTOCOLO>,<ARQUIVO> (ex.: a.txt ou b.txt)
+    S->>S: Verifica a configuração
+    S-->>C: UDP: RESPONSE:<TRANSFER_PORT>,<ARQUIVO>
+    
+  
+    %% alt Transferência via TCP
+        C->>S: TCP: Conecta na porta <TRANSFER_PORT> (TCP_PORT)
+        C->>S: TCP: Envia confirmação da solicitação (nome do arquivo)
+        %% loop Envio dos Segmentos
+            S->>C: TCP: Envia segmento
+            C->>S: TCP: Envia ACK para o segmento recebido
+        %% end
+    %% else Transferência via UDP
+    %%     C->>C: Prepara para receber pacotes na porta <TRANSFER_PORT>
+    %%     loop Envio dos Segmentos (sem confirmação)
+    %%         S->>C: UDP: Envia segmento
+    %%     end
+    %% end
+```
 
 Na [primeira etapa](#etapa-1--negociação-inicial-via-udp), a negociação é realizada via UDP: o cliente envia uma mensagem UDP para a porta de negociação do servidor solicitando um arquivo (por exemplo, "REQUEST,TCP,a.txt" ou "REQUEST,TCP,b.txt"). O servidor, ao receber essa solicitação, processa a informação, verifica a existência do arquivo e, então, responde utilizando UDP, informando qual protocolo de transferência será utilizado (TCP ou UDP) e especificando a porta de transferência adequada para o arquivo solicitado.
 
