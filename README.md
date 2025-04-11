@@ -7,9 +7,8 @@ Este repositório contém a implementação do projeto **FTCP (File Transfer Cus
 *   **Integrante 1:** JULIO HSU - 120110370
 *   **Integrante 2:** GUILHERME DANTAS BOIA DE ALBUQUERQUE - 122110002
 *   **Integrante 3:** IVAN GOMES DE ALCANTARA JUNIOR - 123110305
-*   *(Adicione mais linhas conforme necessário)*
 
-## Como Executar ?
+## Como Executar
 
 1.  **Configuração:** Certifique-se de que esteja na pasta `/src`, o arquivo `config.ini` está presente na mesma pasta dos scripts e configurado corretamente com as portas desejadas e os caminhos para os arquivos `a.txt` e `b.txt`.
 2.  **Iniciar o Servidor:**
