@@ -4,10 +4,30 @@ Este repositório contém a implementação do projeto **FTCP (File Transfer Cus
 
 ## Equipe
 
-*   **Integrante 1:** [Nome Completo do Aluno 1]
-*   **Integrante 2:** [Nome Completo do Aluno 2]
-*   **Integrante 3:** [Nome Completo do Aluno 3]
+*   **Integrante 1:** JULIO HSU - 120110370
+*   **Integrante 2:** GUILHERME DANTAS BOIA DE ALBUQUERQUE - 122110002
+*   **Integrante 3:** IVAN GOMES DE ALCANTARA JUNIOR - 123110305
 *   *(Adicione mais linhas conforme necessário)*
+
+## Como Executar ?
+
+1.  **Configuração:** Certifique-se de que esteja na pasta `/src`, o arquivo `config.ini` está presente na mesma pasta dos scripts e configurado corretamente com as portas desejadas e os caminhos para os arquivos `a.txt` e `b.txt`.
+2.  **Iniciar o Servidor:**
+    
+    ```bash
+    python server_ftcp.py
+    ```
+3.  **Executar o Cliente (em outro terminal):**
+    ```bash
+    python client_ftcp.py
+    ```
+4.  **Agora apenas digitar o tipo de arquivo requerida (a.txt ou b.txt):**
+    ```bash
+    a.txt
+    ```
+    ```bash
+    b.txt
+    ```
 
 ## Visão Geral do Projeto
 
@@ -34,16 +54,3 @@ Consulte os seguintes arquivos neste repositório para obter detalhes completos 
 *   **[🦈 Tutorial de Análise com Wireshark](./wireshark_tutorial.md):** Contém um guia passo a passo sobre como usar o Wireshark para analisar o arquivo de captura (`.pcap`), incluindo exemplos com DHCP/DNS e instruções específicas para analisar o tráfego do seu protocolo FTCP.
 *   **[📝 Instruções para o Relatório](./relatorio.md):** Apresenta a estrutura e o conteúdo esperado para o relatório final, focando na análise do protocolo e do tráfego de rede capturado.
 *   **[🐍 Exemplo de servidor/cliente (Python)](./echo_server.py):** Um código de exemplo em Python demonstrando um servidor e cliente "echo" que opera simultaneamente em TCP e UDP. 
-
-## Como Executar (Exemplo Básico)
-
-1.  **Configuração:** Certifique-se de que o arquivo `config.ini` está presente na mesma pasta dos scripts e configurado corretamente com as portas desejadas e os caminhos para os arquivos `a.txt` e `b.txt`.
-2.  **Iniciar o Servidor:**
-    
-    ```bash
-    python servidor_ftcp.py
-    ```
-3.  **Executar o Cliente (em outro terminal):**
-    ```bash
-    python cliente_ftcp.py a.txt
-    ```
