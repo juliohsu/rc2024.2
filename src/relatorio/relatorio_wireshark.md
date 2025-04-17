@@ -70,7 +70,7 @@ As imagens estão localizadas na pasta `imagens/` e ilustram:
 A análise permitiu visualizar claramente os pacotes trocados no protocolo FTCP customizado, assim como o funcionamento dos protocolos DHCP e DNS na rede. O uso do Wireshark se mostrou eficiente para inspeção e compreensão do comportamento da rede.
 
 ---
-**Autor:** Ivan Gomes De Alcantara Junior
+**Autor:** Ivan Gomes De Alcantara Junior e Julio Hsu
 
 **Data:** 09/10/2025
 
