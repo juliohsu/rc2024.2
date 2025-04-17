@@ -7,6 +7,7 @@ Este repositório contém a implementação do projeto **FTCP (File Transfer Cus
 *   **Integrante 1:** JULIO HSU - 120110370
 *   **Integrante 2:** GUILHERME DANTAS BOIA DE ALBUQUERQUE - 122110002
 *   **Integrante 3:** IVAN GOMES DE ALCANTARA JUNIOR - 123110305
+*   **Integrante 4:** JOÃO MATHEUS PINTO VILLARIM COUTINHO DE ALMEIDA - 121110386
 
 ## Como Executar
 
